@@ -1,0 +1,22 @@
+{
+  "name": "morea-cafe",
+  "version": "1.0.0",
+  "description": "Landing page para MOREA CAFE",
+  "scripts": {
+    "sass": "sass --watch src/scss/app.scss:dist/css/app.css"
+  },
+  "keywords": [
+    "coffee",
+    "cafe",
+    "landing page",
+    "morea",
+    "sass",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  },
+  "main": "index.js"
+}
