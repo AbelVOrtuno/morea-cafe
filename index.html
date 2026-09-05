@@ -3,10 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOREA Cafe</title>
+    <meta name = "description" content = "MOREA Cafe es un lugar de bebidas y sabores preparados para disfrutar cada momento a tu manera.">
+    <title>MOREA Cafe | Tu momento, tu cafe</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&family=Iosevka+Charon+Mono&family=Lato:ital,wght@0,100;0,400;1,100;1,400&display=swap" rel="stylesheet">
+    <!-- Estilos CSS Compilados -->
     <link rel="stylesheet" href="dist/css/app.css">
 </head>
 <body>
-    <h1>MOREA Cafe</h1> 
+
+    <!-- HEADER -->
+    <header class ="header">
+        <div class="container header__content">
+            <!-- LOGO -->
+
+            <a href="#" class="logo" aria-label="MOREA Cafe">MOREA</a>
+
+            <!-- NAVEGACION -->
+
+            <nav class="nav" aria-label="Navegacion Principal">
+                <a href="#campaign">Experiencia</a>
+                <a href="#testimonials">Opiniones</a>
+                <a href="#reservations">Reserva</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+
+            <!-- REDES SOCIALES -->
+
+            <div class="sociales">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="Whatsapp">WA</a>
+            </div>
+
+            <!-- MENU MOVIL -->
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+
+        <section class="hero">
+            <div class="container hero__content">
+
+            <!-- TEXTO-->
+            
+                <div class="hero__text">
+                    <span class="hero__eyebrow">Cafe .Sabor . Experiencias</span>
+                </div>
+
+                <h1>Tu momento, <span>tu cafe</span></h1>
+
+                <p>Elige,personaliza y disfruta.Creamos bebidas y sabores pensados para disfrutar cada momento a tu manera.</p>
+
+                <a href="#reservation" class="btn btn--primary">Quiero mi cafe</a>
+            </div>
+
+            <!-- IMAGEN -->
+
+            <div class="hero__image">
+                <img src="src/scss/images/hero-coffe.jpg" alt="Capuccino artesanal calientito en MOREA Cafe">
+            </div>
+
+        </section>
+
+        <!-- CAMPAIGN -->
+
+        <section class="campaign" id="campaign">
+           <div class="container campaign__content">
+
+            <div class="campaign__heading">
+                <span class="section__label">MOREA EXPERIENCE</span>
+
+                <h2>Tu momento, tu cafe</h2>
+            </div>
+
+            <div class="campaign__description">
+                <p>No todos disfrutamos el cafe de la misma manera.Por eso puedes elegir,personalizar y crear
+                    una bebida a tu gusto,con los sabores y aromas que más te gusten hecha para ti.Porque en MOREA Cafe creemos que el cafe debe ser tan unico y autentico como tu.
+                </p>
+
+                <a href="#reservation" class="text-link">Descubre la experiencia</a>
+            </div>
+
+           </div>
+        </section>
+
+        <!--FORMULARIO-->
+
+        <section class="reservation" id="reservation">
+
+            <div class="container reservation__content">
+                <!-- TEXTO -->
+
+                <div class="reservation__text">
+
+                    <span class="section-label">Reserva tu experiencia</span>
+
+                    <h2>Haz de hoy tu momento perfecto</h2>
+
+                    <p>Cuentanos que te gustaria disfrutar y nos pondremos en contacto contigo inmediatamente.</p>
+                </div>
+
+                <!-- FORMULARIO -->
+
+                <form class="form" id="reservation-form">
+
+                    <!-- NOMBRE -->
+                    <div class="form__group">
+                        <label for="name">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Escribe tu nombre"
+                            autocomplete ="name"
+                            required
+                        >
+                    </div>
+
+                    <!-- EMAIL -->
+
+                    <div class="form__group">
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input 
+                            type="email"
+                            id="email" 
+                            name="email" 
+                            placeholder="tu@email.com" 
+                            autocomplete="email" 
+                            required
+                        >
+                    </div>
+
+                    <!-- WHATSAPP -->
+
+                    <div class="form__group">
+                        <label for="phone">
+                            WhatsApp
+                        </label>
+
+                        <input type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+55 1234 5678"
+                            autocomplete="tel"
+                            required
+                        >
+                    </div>
+
+                    <!-- PREFERENCIA-->
+
+                    <div class="form__group">
+                        <label for="drink">¿Que te gustaria disfrutar?</label>
+
+                        <select id="drink" name="drink" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option value="coffee">Cafe</option>
+                            <option value="cold-drink">Té helado o bebida fria</option>
+                            <option value="dessert">Postres y pasteles</option>
+                            <option value="breakfast">Desayuno</option>
+                            <option value="experience">MOREA Cafe</option>
+                        </select>
+                    </div>
+
+                    <!--CTA -->
+                    <button type="submit" class="btn btn--primary">Quiero mi experiencia MOREA</button>
+
+                    <!-- MENSAJE JS -->
+
+                    <p class="form__messaje" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Testimonios-->
+
+        <section class="testimonials" id="testimonials">
+
+            <div class="container testimonials__content">
+
+                <div class="testimonials__heading">
+                    <span class="section__label">Experiencias reales</span>
+
+                    <h2>¡Mira lo que opinan algunos de nuestros mejores clientes!</h2>
+                </div>
+
+                <div class="testimonials__grid">
+
+                    <!-- Testimonio 1-->
+
+                    <article class="testimonial">
+                        <div class="testimonial__rating" aria-label="5 de 5 estrellas">   ★★★★★ </div>
+
+                        <blockquote>
+                            "Un lugar bonito,agradable y acogedor,con un cafe delicioso y un servicio excelente.¡Definitivamente volveré!"
+                        </blockquote>
+
+                        <p class="testimonial__author">- Juan Pérez</p>
+                    </article>
+
+                    <!-- Testimonio 2-->
+
+                    <article class="testimonial">
+                        <div class="testimonial__rating" aria-label="5 de 5 estrellas">   ★★★★★ </div>
+
+                        <blockquote>
+                            "La atencion fue excelente y todo estuvo delicioso.¡Recomiendo el capuccino y los postres!"
+                        </blockquote>
+
+                        <p class="testimonial__author">- María García</p>
+                    </article>
+
+
+                    <!-- Testimonio 3-->
+
+                    <article class="testimonial">
+                        <div class="testimonial__rating" aria-label="4 de 5 estrellas">   ★★★★★ </div>
+
+                        <blockquote>
+                            "El lugar perfecto para disfrutar de un buen cafe"
+                        </blockquote>
+
+                        <p class="testimonial__author">- Valeria G</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GARANTIA-->
+
+        <section class="guarantee" id="guarantee">
+
+            <div class="container guarantee__content">
+                <div class="guarantee__heading">
+                    <span class="section-label">Nuestra promesa</span>
+
+                    <h2>Calidad en cada detalle.</h2>
+                </div>
+
+                <div class="guarantee__features">
+                    <article class="feature">
+                        <span class="feature__number">01</span>
+
+                        <h3>Ingredientes seleccionados</h3>
+
+                        <p>Elegimos cuidadosamente los ingredientes que utilizamos en cada preparacion.</p>
+                    </article>
+
+                    <article class="feature">
+                        <span class="feature__number">02</span>
+
+                        <h3>Preparacion al momento</h3>
+
+                        <p>Cada bebida se prepara pensando en ofrecerte la mejor experiencia.</p>
+                    </article>
+
+                    <article class="feature">
+                        <span class="feature__number">03</span>
+
+                        <h3>Atencion personalizada</h3>
+
+                        <p>Personaliza tu bebida tanto como lo desees y disfruta exactamente como te gusta.</p>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+
+        <section class="CTA">
+
+            <div class="containercta__content">
+                <span class="section__label">Tu proximo momento perfecto</span>
+
+                <h2>¿Listo para disfrutarlo?</h2>
+
+                <p>Tu proxima experiencia comienza con un buen cafe.</p>
+
+                <a href="#reservation" class="btn btn--light">¡Quiero mi experiencia!</a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer" id="contact">
+        <div class="container footer__content">
+            <!--MARCA-->
+
+            <div class="footer__brand">
+                <a href="#" class="logo">MOREA</a>
+
+                <p>Cafe,sabores y buenos momentos.</p>
+            </div>
+
+            <!-- INFORMACION DE CONTACTO -->
+
+            <div class="footer__contact">
+                <h3>Visitanos</h3>
+                <address>
+                    <p>123 Calle Principal</p>
+                    <p>Acapulco Guerrero</p>
+                    <p>Lun - Vie: 8:00 AM - 10:00 PM</p>
+                    <p>Sab - Dom: 12:00 PM - 0:00 AM</p>
+                </address>
+            </div>
+
+            <!-- REDES SOCIALES -->
+
+            <div class="footer__socials">
+                <h3>Siguenos</h3>
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="Whatsapp">WA</a>
+            </div>
+        </div>
+
+    </footer>
 </body>
 </html>
