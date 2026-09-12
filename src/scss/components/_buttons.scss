@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Botones 
+
+.btn{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+    padding: 0.9rem 1.75rem;
+
+    border: 1px solid transparent;
+    border-radius: $radius-pill;
+
+    font-family: $font-body;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+
+    transition: 
+        transform $transition-normal,
+        background-color $transition-normal,
+        color $transition-normal;
+
+    &:hover{
+        transform: translateY(-2px);
+    }
+    &:focus-visible{
+        outline: 3px;
+    }
+    &:active{
+        transform: translateY(0);
+    }
+}
+
+// Boton Principal
+
+.btn--primary{
+    background-color: $color-dark;
+    color: $color-white;
+    &:hover{
+        background-color: $color-brown;
+    }
+}
+
+// Boton claro
+
+.btn--light{
+    background-color: $color-white;
+    color: $color-dark;
+    &:hover{
+        background-color: $color-surface;
+    }
+}

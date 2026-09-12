@@ -1,0 +1,107 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins" as*;
+
+// Hero 
+.hero{
+    min-height: calc(100vh - 5rem);
+
+    display: grid;
+    align-items: center;
+
+    padding-block: 4rem;
+    overflow: hidden;
+}
+.hero__content{
+    display: grid;
+    gap: 3rem;
+
+    @include desktop{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 5rem;
+    }
+}
+
+// Texto
+.hero__text{
+    max-width: 650px;
+}
+.hero__eyebrow{
+    display: inline-block;
+    margin-bottom: 1.25rem;
+
+    color: $color-accent;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+.hero h1{
+    margin-bottom: 1.5rem;
+}
+.hero h1 span{
+    color: $color-brown;
+    font-style: italic;
+}
+.hero p{
+    margin-bottom: 2rem;
+    color: $color-text;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+// Imagen 
+.hero__image{
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    overflow: hidden;
+    border-radius: 50% 50% 0 0;
+}
+.hero__image img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform $transition-slow;
+}
+.hero__image:hover img{
+    transform: scale(1.03);
+}
+
+// Tablet 
+@include tablet{
+    .hero{
+        padding-block: 5rem;
+    }
+    .hero__image{
+        justify-self: end;
+    }
+}
+
+// Laptop y Pantallas grandes
+@include desktop{
+    .hero{
+        padding-block: 6rem;
+    }
+    .hero__content{
+        gap: 4rem;
+    }
+    .hero__image{
+        justify-self: end;
+        max-width: 500px;
+        margin-right: 2rem;
+    }
+}
+@include large{
+    .hero{
+        min-height: auto;
+        padding-block: 7rem;
+    }
+    .hero__image{
+        margin-right: 2rem;
+    }
+    .hero__image img{
+        height: 500px;
+    }
+}

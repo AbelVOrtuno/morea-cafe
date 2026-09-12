@@ -1,0 +1,107 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins" as*;
+
+// Footer
+
+.footer{
+    padding-block: 4rem 2rem;
+
+    background-color: $color-background;
+    border-top: 1px solid rgba(33, 26, 22, 0.1);
+}
+.footer__content{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    @include desktop{
+        grid-template-columns: 1.5fr 1fr 1fr;
+        align-items: start;
+        gap: 4rem;
+    }
+    @include large{
+        gap: 6rem;
+    }
+}
+// Marca 
+.footer__brand{
+    .logo{
+        display: inline-block;
+        margin-bottom: 1rem;
+
+        font-size: 3rem;
+    }
+    p{
+        max-width: 35ch;
+
+        color: $color-text;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+// Contacto 
+.footer__contact{
+    h3{
+        margin-bottom: 1rem;
+
+        font-family: $font-body;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+    address{
+        font-style: normal;
+    }
+    p{
+        color: $color-text;
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+// Redes Sociales 
+.footer__socials{
+    h3{
+        margin-bottom: 1rem;
+        font-family: $font-body;
+        font-size: 1.9rem;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+    a{
+        display: inline-grid;
+        place-items: center;
+
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.5rem;
+
+        border: 1px solid rgba(33, 26, 22, 0.15);
+        border-radius: 50%;
+
+        color: $color-dark;
+        font-size: 0.75rem;
+        font-weight: 700;
+
+        transition: 
+            background-color $transition-normal,
+            color $transition-normal,
+            transform $transition-normal;
+
+        &:hover{
+            background-color: $color-dark;
+            color: $color-white;
+            transform: translateY(-3px);
+        }
+        &:focus-visible{
+            outline: 3px solid $color-accent;
+            outline-offset: 3px;
+        }
+    }
+}

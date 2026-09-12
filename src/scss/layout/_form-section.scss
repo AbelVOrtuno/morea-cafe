@@ -1,0 +1,110 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins" as*;
+
+// Reserva
+
+.reservation{
+    background-color: $color-surface;
+}
+.reservation__content{
+    display: grid;
+    gap: 3rem;
+    @include tablet{
+        gap: 4rem;
+    }
+    @include desktop{
+        grid-template-columns: 0.9fr 1.1fr;
+        align-items: center;
+        gap: 6rem;
+    }
+}
+// Texto 
+.reservation__text{
+    max-width: 500px;
+    .section-label{
+        display: inline-block;
+        margin-bottom: 1.25rem;
+
+        color: $color-accent;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+    }
+    h2{
+        margin-bottom: 1.5rem;
+        max-width: 12ch;
+    }
+    p{
+        color: $color-text;
+        line-height: 1.8;
+    }
+}
+
+// Formulario 
+.reservation .form{
+    padding: 2rem;
+
+    background-color: $color-white;
+    border-radius: $radius-medium;
+    box-shadow: $shadow-soft;
+
+    @include tablet{
+        padding: 2.5rem;
+    }
+    @include desktop{
+        padding: 3rem;
+    }
+}
+.reservation .form .btn{
+    width: 100%;
+    margin-top: 0.5rem;
+
+    min-height: 3.75rem;
+    font-size: 1rem;
+    box-shadow: $shadow-soft;
+    &:hover{
+        box-shadow: $shadow-medium;
+    }
+}
+.form__message{
+    min-height: 1.5rem;
+    
+    color: $color-brown;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form__group,
+input,
+select{
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 0.9rem 1rem;
+
+    border: 1px solid rgba(33, 26, 22, 0.15);
+    border-radius: 2rem;
+
+    background-color: $color-background;
+    color: $color-dark;
+
+    outline: none;
+
+    transition: 
+        border-color $transition-normal,
+        box-shadow $transition-normal,
+        background-color $transition-normal;
+    
+    &:hover{
+        border-color: $color-accent;
+        background-color: $color-white;
+        box-shadow: 0 0 0 3px rgba(184, 138, 85, 0.15);
+    }
+}
+.form__group input::placeholder{
+    color: rgba(81, 71, 64, 0.6);
+}
+label{
+    font-size: 1.5rem;
+}
