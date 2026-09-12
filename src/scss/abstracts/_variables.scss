@@ -1,0 +1,40 @@
+// Colores 
+$color-background: #f7f3ee;
+$color-surface: #efe7de;
+$color-dark: #211a16;
+$color-brown: #6f4e37;
+$color-accent: #b88a55;
+$color-text: #514740;
+$color-white: #ffffff;
+
+// Tipografia 
+$font-heading: "Iosevka Charon Mono", serif;
+$font-body: "Caacupe One", sans-serif;  
+
+// Contenedor 
+$container-width: 1200px;
+$container-padding: 1.25rem;
+
+// Breakpoints
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1200px;
+
+// Bordes 
+
+$radius-small: 0.5rem;
+$radius-medium: 1rem;
+$radius-large: 2rem;
+$radius-pill: 99px;
+
+// Sombras 
+
+$shadow-soft: 0 10px 30px rgba(33, 26, 22, 0.08);
+$shadow-medium: 0 15 40px rgba(33, 26, 22, 0.12);
+
+// Transiciones 
+
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;

@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+
+// Tarjetas 
+
+.card{
+    padding: 2rem;
+    background-color: $color-white;
+    border: 1px solid rgba(33, 26, 22, 0.08);
+    border-radius: $radius-medium;
+
+    box-shadow: $shadow-soft;
+    transition: 
+        transform $transition-normal,
+        box-shadow $transition-normal;
+
+    &:hover{
+        transform: translateY(-4px);
+        box-shadow: $shadow-medium;
+    }
+}

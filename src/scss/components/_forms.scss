@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+
+// Formulario
+
+.form{
+    display: grid;
+    gap: 1.25rem;
+}
+
+// Grupo del Formulario
+
+.form__group{
+    display: grid;
+    gap: 0.5rem;
+}
+// Label 
+.form__group label{
+    color: $color-dark;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+// Inputs y Select
+
+.form__group input,
+.form__group select{
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 0.85rem 1rem;
+
+    border: 1px solid rgba(33, 26, 22, 0.2);
+}
+
+// Focus
+
+.form__group input:focus,
+.form__group select:focus{
+    border-color: $color-accent;
+    box-shadow: 0 0 0 3px rgba(184, 138, 85, 0.15);
+}
+
+// Placeholder 
+.form__group input::placeholder{
+    color: rgba(81, 71, 64, 0.6);
+}
+
+// Mensaje
+.form__message{
+    min-height: 1.5rem;
+    font-size: 0.9rem;
+}

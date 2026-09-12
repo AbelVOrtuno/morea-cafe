@@ -1,0 +1,116 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins" as*;
+
+// Testimonios
+
+.testimonials{
+    background-color: $color-background;
+}
+
+.testimonials__content{
+    display: grid;
+    gap: 3rem;
+
+    @include tablet{
+        gap: 5rem;
+    }
+    @include desktop{
+        gap: 6rem;
+    }
+}
+
+// Encabezado 
+
+.testimonials__heading{
+    max-width: 700px;
+    .section__label{
+        display: inline-block;
+        margin-bottom: 1.25rem;
+
+        color: $color-accent;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+    }
+    h2{
+        max-width: 14ch;
+        margin-bottom: 1rem;
+    }
+}
+
+// Grid 
+.testimonials__grid{
+    display: grid;
+    gap: 1.5rem;
+   
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    @include desktop{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    @include large{
+        gap: 2.5rem;
+    }
+}
+
+// Tarjeta
+.testimonial{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 2.25rem;
+
+    background-color: $color-white;
+    border: 1px solid rgba(33, 26, 22, 0.08);
+    border-radius: $radius-medium;
+
+    box-shadow: $shadow-soft;
+
+    transition: 
+        transform $transition-normal,
+        box-shadow $transition-normal;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+
+        color: rgba(184, 138, 85, 0.2);
+        font-family: $font-heading;
+        font-size: 4rem;
+        line-height: 1;
+    }
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: $shadow-medium;
+    }
+}
+
+// Calificacion 
+.testimonial__rating{
+    margin-bottom: 1.25rem;
+    color: gold;
+    font-size: 1.3rem;
+    letter-spacing: 0.15rem;
+}
+// Comentario
+.testimonial blockquote{
+    margin-bottom: 2rem;
+    color: $color-dark;
+    font-family: $font-heading;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+// Autor
+.testimonial__author{
+    color: $color-text;
+    font-size: 1.3rem;
+    font-weight: 700;
+}

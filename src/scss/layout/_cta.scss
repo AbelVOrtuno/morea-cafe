@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins" as*;
+
+// CTA Final
+
+.cta{
+    background-color: $color-dark;
+    color: $color-white;
+    text-align: center;
+}
+.cta__content{
+    max-width: 75rem;
+    margin-inline: auto;
+
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    @include tablet{
+        gap: 2.25rem;
+    }
+    @include desktop{
+        gap: 2.25rem;
+    }
+}
+
+// Etiqueta
+.cta .section__label{
+    color: $color-accent;
+
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+// Titulo 
+.cta h2{
+    color: $color-white;
+    max-width: 12ch;
+}
+// Descripcion
+.cta p{
+    max-width: 50ch;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+// Boton CTA 
+.cta .btn{
+    min-width: 14rem;
+    margin-top: 0.5rem;
+    &:hover{
+        transform: translateY(-3px);
+    }
+}

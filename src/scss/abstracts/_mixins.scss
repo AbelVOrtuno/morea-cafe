@@ -1,0 +1,51 @@
+@use "variables" as *;
+
+// Contenedor 
+
+@mixin container{
+    width: min(100% - 2 * $container-padding, $container-width);
+    margin-inline: auto;
+}
+
+// Flexbox 
+
+@mixin flex-center{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+// Media Queries 
+
+@mixin tablet{
+    @media (min-width: $breakpoint-tablet){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: $breakpoint-desktop){
+        @content;
+    }
+}
+
+@mixin large{
+    @media (min-width: $breakpoint-large){
+        @content;
+    }
+}
+
+// Boton 
+
+@mixin button-reset{
+    border: 0;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+// Transiciones 
+
+@mixin transition($property: all){
+    transition: $property $transition-normal;
+}
