@@ -25,7 +25,7 @@
 
             <!-- NAVEGACION -->
 
-            <nav class="nav" aria-label="Navegacion Principal">
+            <nav class="nav" aria-label="Navegacion Principal" id="main-nav">
                 <a href="#campaign">Experiencia</a>
                 <a href="#testimonials">Opiniones</a>
                 <a href="#reservation">Reserva</a>
@@ -47,7 +47,9 @@
                 type="button"
                 aria-label="Abrir menú"
                 aria-expanded="false">
-                ☰
+                <span class="menu-toggle__icon">
+                    ☰
+                </span>
             </button>
         </div>
     </header>
@@ -63,18 +65,18 @@
                 <div class="hero__text">
                     <span class="hero__eyebrow">Cafe .Sabor . Experiencias</span>
 
-                    <h1>Tu momento, <span>tu cafe</span></h1>
+                    <h1 class="animate">Tu momento, <span>tu cafe</span></h1>
 
-                    <p>Elige,personaliza y disfruta.Creamos bebidas y sabores pensados para disfrutar cada momento a tu manera.</p>
+                    <p class="animate animate--delay-1">Elige,personaliza y disfruta.Creamos bebidas y sabores pensados para disfrutar cada momento a tu manera.</p>
 
-                    <a href="#reservation" class="btn btn--primary">Quiero mi cafe</a>
+                    <a href="#reservation" class="btn btn--primary animate animate--delay-2">Quiero mi cafe</a>
                 </div>
 
             </div>
 
             <!-- IMAGEN -->
 
-            <div class="hero__image">
+            <div class="hero__image animate animate--delay-3">
                 <img src="src/images/hero-coffe.jpg" alt="Capuccino artesanal calientito en MOREA Cafe">
             </div>
 
@@ -88,11 +90,11 @@
             <div class="campaign__heading">
                 <span class="section__label">MOREA EXPERIENCE</span>
 
-                <h2>Tu momento, tu cafe</h2>
+                <h2 class="animate">Tu momento, tu cafe</h2>
             </div>
 
             <div class="campaign__description">
-                <p>No todos disfrutamos el cafe de la misma manera.Por eso puedes elegir,personalizar y crear
+                <p class="animate">No todos disfrutamos el cafe de la misma manera.Por eso puedes elegir,personalizar y crear
                     una bebida a tu gusto,con los sabores y aromas que más te gusten hecha para ti.Porque en MOREA Cafe creemos que el cafe debe ser tan unico y autentico como tu.
                 </p>
 
@@ -113,14 +115,14 @@
 
                     <span class="section-label">Reserva tu experiencia</span>
 
-                    <h2>Haz de hoy tu momento perfecto</h2>
+                    <h2 class="animate">Haz de hoy tu momento perfecto</h2>
 
-                    <p>Cuentanos que te gustaria disfrutar y nos pondremos en contacto contigo inmediatamente.</p>
+                    <p class="animate">Cuentanos que te gustaria disfrutar y nos pondremos en contacto contigo inmediatamente.</p>
                 </div>
 
                 <!-- FORMULARIO -->
 
-                <form class="form" id="reservation-form">
+                <form class="form" id="reservation-form" novalidate>
 
                     <!-- NOMBRE -->
                     <div class="form__group">
@@ -205,7 +207,7 @@
                 <div class="testimonials__heading">
                     <span class="section__label">Experiencias reales</span>
 
-                    <h2>¡Mira lo que opinan algunos de nuestros mejores clientes!</h2>
+                    <h2 class="animate">¡Mira lo que opinan algunos de nuestros mejores clientes!</h2>
                 </div>
 
                 <div class="testimonials__grid">
@@ -259,7 +261,7 @@
                 <div class="guarantee__heading">
                     <span class="section-label">Nuestra promesa</span>
 
-                    <h2>Calidad en cada detalle.</h2>
+                    <h2 class="animate">Calidad en cada detalle.</h2>
                 </div>
 
                 <div class="guarantee__features">
@@ -298,9 +300,9 @@
             <div class="container cta__content">
                 <span class="section__label">Tu proximo momento perfecto</span>
 
-                <h2>¿Listo para disfrutarlo?</h2>
+                <h2 class="animate">¿Listo para disfrutarlo?</h2>
 
-                <p>Tu proxima experiencia comienza con un buen cafe.</p>
+                <p class="animate">Tu proxima experiencia comienza con un buen cafe.</p>
 
                 <a href="#reservation" class="btn btn--light">¡Quiero mi experiencia!</a>
             </div>
@@ -342,6 +344,12 @@
             </div>
         </div>
 
+        <div class="footer__signature">
+            <p>&copy; 2026 MOREA Cafe - Diseñado y Desarrollado por <a href="#">VORTEX WEB</a></p>
+        </div>
+
     </footer>
+    
+    <script type="module" src="src/JS/main.js"></script>
 </body>
 </html>
