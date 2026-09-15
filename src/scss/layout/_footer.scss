@@ -4,7 +4,7 @@
 // Footer
 
 .footer{
-    padding-block: 4rem 2rem;
+    padding-top: 4rem;
 
     background-color: $color-background;
     border-top: 1px solid rgba(33, 26, 22, 0.1);
@@ -102,6 +102,48 @@
         &:focus-visible{
             outline: 3px solid $color-accent;
             outline-offset: 3px;
+        }
+    }
+}
+
+// Firma de la marca 
+
+.footer__signature {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem 1.25rem;
+
+    background-color: $color-dark;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        width: 100%;
+        max-width: 100%;
+       
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    a {
+        color: $color-accent;
+        font-weight: 800;
+
+        transition: color $transition-normal;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    @include desktop {
+        padding: 1.1rem 1.5rem;
+
+        p {
+            font-size: 1rem;
         }
     }
 }

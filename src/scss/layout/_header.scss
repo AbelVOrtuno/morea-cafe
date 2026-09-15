@@ -34,6 +34,7 @@
         gap: 2rem;
     }
 }
+
 .nav a{
     position: relative;
     color: $color-text;
@@ -58,6 +59,54 @@
         color: $color-dark;
         &::after{
             width: 100%;
+        }
+    }
+}
+.nav--open{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    position: absolute;
+    top: 5rem;
+    left: 0;
+
+    width: 100%;
+    padding: 2rem 1.25rem;
+
+    background-color: $color-dark;
+    border-bottom: 1px solid rgba(33,26,22,0.08);
+    a{
+        color: $color-white;
+        font-size: 1rem;
+        &:hover{
+            color: $color-accent;
+        }
+        &::after{
+            display: none;
+        }
+    }
+    @include desktop{
+        position: static;
+        width: auto;
+        padding: 0;
+
+        flex-direction: row;
+        gap: 2rem;
+
+        background-color: transparent;
+        border-bottom: 0;
+
+        a{
+            color: $color-text;
+            font-size: 1rem;
+
+            &:hover{
+                color: $color-dark;
+            }
+            &::after{
+                display: block;
+            }
         }
     }
 }
